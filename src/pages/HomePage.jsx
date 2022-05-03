@@ -1,23 +1,39 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
-//components
-
+// Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 
+// Data
+// import { allProjects } from "../data";
 
 
-//Data
-import{ allProjects } from "../data";
+function HomePage() {
+//States
+  const [projectList, setProjectList] = useState([]);
 
-function HomePage(){
-    
-    return(
+// Action & Helpers
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_API_URL}projects`)
+      .then((results) => {
+        return results.json();
+      })
+      .then((data) => {
+        setProjectList(data);
+      });
+  }, []);
+
+  return (
     <div id="project-list">
-        {allProjects.map((projectData, key) => {
-            return <ProjectCard key={key} projectData={projectData} />;
-        })}
-        </div>
-    );
+      {projectList.map((projectData) => {
+        return (
+          <ProjectCard
+            key={`project-${projectData.id}`}
+            projectData={projectData}
+          />
+        );
+      })}
+    </div>
+  );
 }
 
 export default HomePage;

@@ -1,13 +1,15 @@
 import React from "react";
-import{BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
 
+// Components
+import Nav from "./components/Nav/Nav";
 
-import Nav from "./components/Nav/Nav"
-
-//pages
+// Pages
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
-//styles
+
+// Styles
 import "./App.css";
 
 function App() {
@@ -15,12 +17,13 @@ function App() {
     <Router>
       <div>
         <Nav />
-          <Routes>
-            <Route path="/project/:id" element={<ProjectPage />} />
-            <Route path="/" element={<HomePage />} />
-          </Routes>
-        </div>
-      </Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element ={<LoginPage />} />
+          <Route path="/project/:id" element={<ProjectPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
