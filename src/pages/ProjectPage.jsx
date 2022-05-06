@@ -1,6 +1,13 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 
+//Styles
+import "./ProjectPage.css"
+
+// Components
+
+import PledgeForm from "../components/PledgeForm/PledgeForm";
+
 // Data
 // import { projectData } from "../data";
 
@@ -33,22 +40,29 @@ console.log(projectData)
 //Normal state
   return (
     <>
-      <h2>{projectData.title}</h2>
-      <img src={projectData.image} alt="the project"/>
-      <div className="description">{projectData.description}</div>
-      <h3>Created at: {projectData.date_created}</h3>
-      <div>Goal: ${projectData.goal}</div>
-      <h3>{`Status: ${projectData.is_open}`}</h3>
-      <h3>Pledges:</h3>
-      <ul>
-        {projectData.pledges.map((pledgeData, key) => {
-          return (
-            <li>
-              ${pledgeData.amount} from {pledgeData.supporter}
-            </li>
-          );
-        })}
-      </ul>
+      <div className="pledge-details">
+        <div className="pledge-details-text">
+            <h2>{projectData.title}</h2>
+            <p>Dream course to change the student's life:</p>
+            <div className="description">{projectData.description}</div>
+            <h3>Created at: {projectData.date_created}</h3>
+            <div>Goal: ${projectData.goal}</div>
+            <h3>{`Status: ${projectData.is_open}`}</h3>
+            <h3>Pledges:</h3>
+            <ul>
+            {projectData.pledges.map((pledgeData, key) => {
+              return (
+                <li>
+                  ${pledgeData.amount} from {pledgeData.supporter}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <img className="project-img" src={projectData.image} alt="the project"/>
+      </div>
+
+      <PledgeForm projectId={id} />
     </>
   );
 }

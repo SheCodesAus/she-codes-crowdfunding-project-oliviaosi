@@ -1,0 +1,28 @@
+
+
+/* .navbar{  
+    border:solid 1px green;  
+    display:inline-block;
+    padding: 3rem;
+}; */
+
+.navbar{  
+    flex-basis: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem;
+
+};
+.left-nav{
+    display:inline-block;;
+    justify-content: space-between;
+}
+
+.login-btn{
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    border-color: purple;
+}

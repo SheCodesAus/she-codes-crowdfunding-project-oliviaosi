@@ -1,0 +1,16 @@
+.pledge-details{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-top: 1px solid #DCD8EE;
+    padding: 2rem 5rem 2rem 0rem;
+    border-bottom: 1px solid #DCD8EE;
+    background-color: #FFFBFA;
+
+}
+
+.project-img{
+    width: 30%;
+}
