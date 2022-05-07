@@ -34,7 +34,7 @@ function HomePage() {
               <h1>Tranform people’s life through education</h1>
               <p>Young talents around the world are working on enriching their lives by moving into new careers. 
 Help them to change their lives.</p>
-              <a href="/" className="button" >Support a student today</a>
+              <a href="/" className="button">Support a student today</a>
           </div>
           <img className="hero-image" width="px" src={ banner } alt="successimg" />
       </div>
