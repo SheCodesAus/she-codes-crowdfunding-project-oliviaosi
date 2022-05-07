@@ -54,6 +54,18 @@
     height: 200px;
     object-fit: cover;
   }
+  .student-section{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  .project-card img.avatar{
+    height:120px;
+    width: 120px;
+    border-radius: 120px;
+  }
+  
   .card-content{
     /* font-family: roboto; */
     text-align: left;

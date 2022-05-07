@@ -13,4 +13,18 @@
 
 .project-img{
     width: 30%;
+    padding:2rem 0 2rem 0
+    
+}
+
+.pledge-details img.avatar{
+    height:200px;
+    width: 200px;
+    border-radius: 120px;
+  }
+.pledge-section {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap:2rem;
 }

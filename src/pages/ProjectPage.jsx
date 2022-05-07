@@ -41,7 +41,9 @@ console.log(projectData)
   return (
     <>
       <div className="pledge-details">
+        <img className="avatar" src={projectData.avatar} alt="avatar"/>
         <div className="pledge-details-text">
+            
             <h2>{projectData.title}</h2>
             <p>Dream course to change the student's life:</p>
             <div className="description">{projectData.description}</div>
@@ -59,10 +61,13 @@ console.log(projectData)
             })}
           </ul>
         </div>
-        <img className="project-img" src={projectData.image} alt="the project"/>
+        
       </div>
-
-      <PledgeForm projectId={id} />
+      <div className="pledge-section">
+        <img className="project-img" src={projectData.image} alt="the project"/>
+        <PledgeForm projectId={id} />
+      </div>
+      
     </>
   );
 }

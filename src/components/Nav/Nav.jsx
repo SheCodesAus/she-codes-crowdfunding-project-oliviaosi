@@ -1,8 +1,30 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import "./Nav.css";
 
 function Nav(){
+
+    const navigate = useNavigate();
+    
+    const navigateToLogin = () => {
+        navigate("/login")
+    }
+
+    const handleSignout = () => {
+        window.localStorage.removeItem("token")
+        navigateToLogin()
+    }
+
+    const checkUser = () => {
+        const isUserLoggedin = !!window.localStorage.getItem("token");
+        console.log("isUserLoggedin", isUserLoggedin)
+
+        return isUserLoggedin
+            ? <button onClick={handleSignout} className="login-btn">Sign out</button>
+            : <button onClick={navigateToLogin} className="login-btn">Login</button>
+        
+    }
+
     return(
         
         <nav className="navbar">
@@ -11,7 +33,8 @@ function Nav(){
             <Link to="/">Homepage</Link>
             </div>
             
-            <Link to="/login" className="login-btn">Login</Link>
+            
+            {checkUser()}
             {/* <Link to="/project">ProjectPage</Link> */}
         </nav>
     );
