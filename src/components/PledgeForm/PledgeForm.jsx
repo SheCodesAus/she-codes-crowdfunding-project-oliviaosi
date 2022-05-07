@@ -25,7 +25,7 @@ function PledgeForm({ projectId }) {
         method: "post",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
+          Authorization: `Token ${token}`,
         },
         body: JSON.stringify({
           project_id: projectId,
