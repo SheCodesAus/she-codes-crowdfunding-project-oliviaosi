@@ -43,5 +43,20 @@
 a{
     text-decoration: none;
 }
+.spacer1{
+    height: 1rem;
 
+}
+
+.primary-button{
+    display: flex;
+    width: max-content;
+    border: none;
+    margin-top: 0.4rem;
+    background-color: #6750A4;
+    color: white;
+    border-radius: 100px;
+    padding: 0.6rem 0.6rem 0.6rem 0.6rem;
+    cursor: pointer;
+}
 

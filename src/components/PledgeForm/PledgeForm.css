@@ -1,0 +1,33 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+.amount-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.comment-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.anonymous{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.submit-btn{
+    border: none;
+    margin-top: 0.4rem;
+    background-color: #6750A4;
+    color: white;
+    border-radius: 100px;
+    padding: 0.5rem 0 0.5rem 0;
+    cursor: pointer;
+}

@@ -1,0 +1,15 @@
+
+
+.Projectform{
+    margin: 0 auto;
+    width: 30%;
+    display: flex;
+    border-top: thistle;
+    /* background-color: tomato; */
+
+}
+
+.row{
+    display: flex;
+    gap: 0.5rem;
+}

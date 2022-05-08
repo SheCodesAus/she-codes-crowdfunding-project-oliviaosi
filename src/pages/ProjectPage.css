@@ -1,30 +1,65 @@
-.pledge-details{
+.spacer{
+   border-top:1px solid #DCD8EE;
+  
+}
+
+.pledge-detail-section {
     display: flex;
+}
+.pledge-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin: auto;
+    display: flex;
+
+}
+
+.pledge-details{
+    width: 560px;
+    display: flex; 
     justify-content: center;
     gap: 4rem;
     /* justify-content: space-between; */
     align-items: center;
-    border-top: 1px solid #DCD8EE;
-    padding: 2rem 5rem 2rem 0rem;
-    border-bottom: 1px solid #DCD8EE;
+    /* border-top: 1px solid #DCD8EE; */
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     background-color: #FFFBFA;
+    border-radius: 8px;
 
 }
 
 .project-img{
-    width: 30%;
-    padding:2rem 0 2rem 0
+    width: 50%;
+    /* padding:2rem 0 2rem 0 */
     
 }
 
 .pledge-details img.avatar{
-    height:200px;
-    width: 200px;
+    height:160px;
+    width: 160px;
     border-radius: 120px;
   }
-.pledge-section {
-    margin: auto;
+
+.donation-section{
     display: flex;
-    justify-content: center;
+    padding-top: 1.5rem;
     gap:2rem;
+}
+.pledge-donation {
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: center; */
+    gap:0.5rem;
+}
+
+.spacer2{
+    min-height: 160px;
+}
+
+.pledges .status{
+    font-size: 18px; font-weight: bold;
 }

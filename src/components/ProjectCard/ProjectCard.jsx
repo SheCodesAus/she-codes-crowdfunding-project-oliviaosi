@@ -21,8 +21,6 @@ function ProjectCard(props) {
                 <div className="description"> {projectData.description}</div>
               </div>
             </div>
-            
-            
         </Link>
         </div>
   );

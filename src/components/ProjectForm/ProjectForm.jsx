@@ -3,6 +3,9 @@ import React, { useState } from "react";
 // Imports
 import { useNavigate } from "react-router-dom";
 
+//styles
+import "./ProjectForm.css";
+
 function ProjectForm(projectData) {
   // State
   const [project, postProject] = useState(
@@ -112,10 +115,11 @@ function ProjectForm(projectData) {
 ]
 
     return ( 
-        <form>
+        <form className="Projectform">
+            <h3>Create a new project</h3>
             {formFields.map((field, key) => {
                 return (
-                <div key={`${key}-${field.id}`}>
+                <div className="row" key={`${key}-${field.id}`}>
                     <label htmlFor={field.id}>
                         {field.label}
                     </label>
@@ -128,7 +132,8 @@ function ProjectForm(projectData) {
                 </div>
                 )
             })}
-            <button type="submit" onClick={handleSubmit}>
+            
+            <button className="primary-button" type="submit" onClick={handleSubmit}>
                 Post Project
             </button>
         </form>

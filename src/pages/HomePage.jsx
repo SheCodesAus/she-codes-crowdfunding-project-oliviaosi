@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import banner from "./banner.svg";
 import headshot from "./headshot.svg";
+
 import {Link} from "react-router-dom";
 
 // Components
@@ -35,7 +36,8 @@ function HomePage() {
               <h1>Tranform people’s life through education</h1>
               <p>Young talents around the world are working on enriching their lives by moving into new careers. 
 Help them to change their lives.</p>
-              <Link to="/projects/create" className="button">Create a new project</Link>
+              <div className="spacer1"></div>
+              <Link to="/projects/create" className="primary-button">Create a new project</Link>
           </div>
           <img className="hero-image" width="px" src={ banner } alt="successimg" />
       </div>
@@ -45,7 +47,7 @@ Help them to change their lives.</p>
                 <h1>Become an instructor</h1>
                 <p>Share your industry experience by donating a little bit of time. 
 Your story will inspire many young talents.</p>
-                <a href="/" className="button" >Help them today</a>
+                {/* <a href="/" className="button" >Help them today</a> */}
         </div>
       </div>
 

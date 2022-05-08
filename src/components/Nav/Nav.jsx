@@ -1,6 +1,7 @@
 import React from "react";
 import {Link, useNavigate} from "react-router-dom";
 import "./Nav.css";
+import logo from "./logo.svg";
 
 function Nav(){
 
@@ -29,7 +30,7 @@ function Nav(){
         
         <nav className="navbar">
             <div className="left-nav">
-            <div> Logo</div>
+            <img src={ logo } className="logo" alt="logo" />
             <Link to="/">Homepage</Link>
             </div>
             

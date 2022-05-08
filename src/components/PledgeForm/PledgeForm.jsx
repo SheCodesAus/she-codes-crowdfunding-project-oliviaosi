@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+//styles
+import "./PledgeForm.css";
 
 function PledgeForm({ projectId }) {
   // State
@@ -50,7 +52,7 @@ function PledgeForm({ projectId }) {
 
   return (
     <form>
-      <div>
+      <div className="amount-fields">
         <label htmlFor="amount">Amount:</label>
         <input
           type="number"
@@ -59,7 +61,7 @@ function PledgeForm({ projectId }) {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className="comment-fields">
         <label htmlFor="comment">Comment:</label>
         <input
           type="text"
@@ -68,7 +70,7 @@ function PledgeForm({ projectId }) {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className="anonymous">
         <label htmlFor="anonymous">Anonymous:</label>
         <select id="anonymous" onChange={handleChange}>
           <option value="">--Please choose an option--</option>
@@ -76,7 +78,7 @@ function PledgeForm({ projectId }) {
           <option value={false}>False</option>
         </select>
       </div>
-      <button type="submit" onClick={handleSubmit}>
+      <button className="submit-btn" type="submit" onClick={handleSubmit}>
         Submit Pledge
       </button>
     </form>

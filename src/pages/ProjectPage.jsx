@@ -40,34 +40,46 @@ console.log(projectData)
 //Normal state
   return (
     <>
-      <div className="pledge-details">
-        <img className="avatar" src={projectData.avatar} alt="avatar"/>
-        <div className="pledge-details-text">
+      <div className="spacer"></div>
+
+      <div className="pledge-section">
+        <h3>You are supporting:</h3>
+        
+        <div className="pledge-details">
+          <img className="avatar" src={projectData.avatar} alt="avatar"/>
+          <div className="pledge-details-text">
+              
+              <h3>{projectData.title}</h3>
+              <p>Dream course to change the student's life:</p>
+              <h3 className="description">{projectData.description}</h3>
+              <div>Created at: {projectData.date_created}</div>
+              <div>Goal: ${projectData.goal}</div>
+              <div className="status">{`Status: ${projectData.is_open}`}</div>
+              <div className="pledges">Pledges:</div>
+              <ul>
+              {projectData.pledges.map((pledgeData, key) => {
+                return (
+                  <li>
+                    ${pledgeData.amount} from {pledgeData.supporter}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
             
-            <h2>{projectData.title}</h2>
-            <p>Dream course to change the student's life:</p>
-            <div className="description">{projectData.description}</div>
-            <h3>Created at: {projectData.date_created}</h3>
-            <div>Goal: ${projectData.goal}</div>
-            <h3>{`Status: ${projectData.is_open}`}</h3>
-            <h3>Pledges:</h3>
-            <ul>
-            {projectData.pledges.map((pledgeData, key) => {
-              return (
-                <li>
-                  ${pledgeData.amount} from {pledgeData.supporter}
-                </li>
-              );
-            })}
-          </ul>
+        </div>
+
+        <div className="donation-section">
+          <img className="project-img" src={projectData.image} alt="the project"/>  
+          <div className="pledge-donation">
+            <h3>Enter your donation:</h3>
+            <PledgeForm projectId={id} />
+          </div>
         </div>
         
       </div>
-      <div className="pledge-section">
-        <img className="project-img" src={projectData.image} alt="the project"/>
-        <PledgeForm projectId={id} />
-      </div>
-      
+     
+      <div className="spacer2"></div>
     </>
   );
 }
