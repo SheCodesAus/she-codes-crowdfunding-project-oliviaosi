@@ -1,0 +1,32 @@
+.loginform{
+    /* display: flex; */
+    margin: 0 auto;
+    width: 30%;
+    background-color: #DCD8EE;
+    border-radius: 10px;
+    gap:1rem;
+    padding: 40px 20px 40px 20px;
+}
+
+.login-button{
+    width:40%;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.username-field{
+    display: flex;
+    gap:0.5rem;
+    flex-direction: column;
+}
+
+.password-field{
+    display: flex;
+    gap:0.5rem;
+    flex-direction: column;
+}
+input{
+    width:70%;
+    height: 30px;
+    border-radius: 6px;
+}

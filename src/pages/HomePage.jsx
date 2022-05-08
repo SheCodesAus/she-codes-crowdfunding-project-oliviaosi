@@ -53,7 +53,7 @@ Your story will inspire many young talents.</p>
 
       <div className="project-section">
       <div className="section-header">
-          <h2>Latest Projects</h2>
+          <h2>Donate a course to get young talents started</h2>
       </div>
       <div id="project-list">
       {projectList.map((projectData) => {
